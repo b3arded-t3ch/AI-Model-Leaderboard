@@ -23,5 +23,5 @@ CREATE TABLE score (
 	PRIMARY KEY (id),
 	FOREIGN KEY (model_id) REFERENCES model(id) ON DELETE CASCADE
 );
-
-
+CREATE INDEX idx_model_name ON model(model_name);
+CREATE INDEX idx_score ON score(model_id);
